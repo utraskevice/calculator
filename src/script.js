@@ -6,6 +6,7 @@ const subBtn = document.getElementById("subBtn");
 const mulBtn = document.getElementById("mulBtn");
 const divBtn = document.getElementById("divBtn");
 const modBtn = document.getElementById("modBtn");
+const resetBtn = document.getElementById("reset");
 
 const output = document.getElementById("resultPlace");
 
@@ -57,4 +58,13 @@ function modFunction() {
   let y = Number(numTwo.value);
   let result = x % y;
   output.innerHTML = "Result is: " + result;
+}
+
+// Reset
+resetBtn.addEventListener("click", reset);
+
+function reset() {
+  numOne.value = "";
+  numTwo.value = "";
+  output.innerHTML = "";
 }
